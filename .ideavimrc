@@ -1,0 +1,55 @@
+"" Source your .vimrc
+"source ~/.vimrc
+
+"" -- Suggested options --
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set scrolloff=5
+let mapleader = ","
+
+" Do incremental searching.
+set incsearch
+set ignorecase
+set smartcase
+set easymotion
+set surround
+set multiple-cursors
+set commentary
+set ReplaceWithRegister
+set argtextobj
+set exchange
+set textobj-entire
+set highlightedyank
+set sneak
+set vim-paragraph-motion
+set textobj-indent
+set idearefactormode=keep
+set ideajoin
+
+" Nerd
+set NERDTree
+let g:NERDTreeMapActivateNode='l'
+let g:NERDTreeMapJumpParent='h'
+
+" Plugins settings --------------------------------------
+let g:argtextobj_pairs="(:),{:},[:]"
+
+map <leader>h <Action>(PreviousTab)
+map <leader>l <Action>(NextTab)
+map <leader>g <Action>(Generate)
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+"" Map \r to the Reformat Code action
+map <leader>r <Action>(ReformatCode)
+map <leader>t <Action>(Refactorings.QuickListPopupAction)
+"" Map <leader>d to start debug
+map <leader>d <Action>(Debug)
+
+"" Map \b to toggle the breakpoint on the current line
+map <leader>b <Action>(ToggleLineBreakpoint)
+
+
+" Find more examples here: https://jb.gg/share-ideavimrc
